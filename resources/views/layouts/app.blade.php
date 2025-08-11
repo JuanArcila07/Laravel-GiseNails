@@ -47,9 +47,9 @@
   
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('empleados.index') }}
+                                <a class="nav-link" href="{{ route('empleados.index') }}">Empleados</a>
                             </li>
-                        @endauthr
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

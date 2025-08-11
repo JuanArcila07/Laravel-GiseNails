@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage; 
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\Producto;
 
@@ -72,5 +72,11 @@ class ProductoController extends Controller
     {
         $producto->delete();
         return redirect()->route('productos.index')->with('success', 'Producto eliminado correctamente.');
+    }
+
+    public function show($id)
+    {
+        $producto = Producto::findOrFail($id);
+        return view('productos.show', compact('producto'));
     }
 }

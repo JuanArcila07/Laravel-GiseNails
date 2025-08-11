@@ -31,6 +31,7 @@
                             @endif
                         </td>
                         <td>
+                            <a href="{{ route('productos.show', $producto->id) }}" class="btn btn-info btn-sm">Ver</a>
                             <a href="{{ route('productos.edit', $producto) }}" class="btn btn-warning btn-sm">Editar</a>
                             <form action="{{ route('productos.destroy', $producto) }}" method="POST" style="display:inline;">
                                 @csrf

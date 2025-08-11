@@ -13,8 +13,8 @@ Route::get('/', function () {
 
 // Paso 2: Proteger los CRUDs con middleware 'auth'
 Route::middleware(['auth'])->group(function () {
-    Route::resource('productos', ProductoController::class);
-    Route::resource('servicios', ServicioController::class);
+    Route::resource('servicios', App\Http\Controllers\ServicioController::class);
+    Route::resource('productos', App\Http\Controllers\ProductoController::class);
     Route::resource('empleados', EmpleadoController::class);
 });
 

@@ -4,7 +4,7 @@
 <li>
     {{ $cita->fecha }} - {{ $cita->descripcion }}
     <a href="{{ route('citas.show', $cita) }}">Ver detalle</a>
-    <a href="{{ route('citas.edit', $cita) }}">Editar</a>
+    <a href="{{ route('citas.edit', $cita) }}">Editarr</a>
     <form action="{{ route('citas.destroy', $cita) }}" method="POST" style="display:inline;">
         @csrf
         @method('DELETE')

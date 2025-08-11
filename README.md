@@ -8,7 +8,7 @@ GiseNails es una aplicación desarrollada en Laravel que permite la gestión int
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/Laravel-GiseNails.git
+   git clone https://github.com/tu-usuario/Laravel-GiseNails.gitt
    cd Laravel-GiseNails
    ```
 

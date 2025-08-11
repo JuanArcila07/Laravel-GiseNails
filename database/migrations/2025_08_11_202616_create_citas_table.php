@@ -9,16 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-   public function up()
+  public function up()
 {
     Schema::create('citas', function (Blueprint $table) {
         $table->id();
-        $table->unsignedBigInteger('user_id');
-        $table->dateTime('fecha');
-        $table->string('descripcion')->nullable();
+        $table->string('cliente');
+        $table->string('gestora');
+        $table->string('servicio');
+        $table->date('fecha');
+        $table->time('hora');
+        $table->enum('estado', ['Pendiente', 'Confirmada', 'Cancelada'])->default('Pendiente');
         $table->timestamps();
-
-        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
     });
 }
 

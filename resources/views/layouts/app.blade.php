@@ -41,11 +41,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('servicios.index') }}">Servicios</a>
                             </li>
+
                             <li>
                                 <a class="nav-link" href="{{ route('citas.index') }}">Citas</a> <!-- Añade esta línea -->
-
+  
                             </li>
-                        @endauth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('empleados.index') }}
+                            </li>
+                        @endauthr
                     </ul>
 
                     <!-- Right Side Of Navbar -->

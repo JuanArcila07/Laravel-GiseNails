@@ -2,13 +2,20 @@
 
 ## ¿Qué hace el sistema?
 
-GiseNails es una aplicación desarrollada en Laravel que permite la gestión integral de un centro de uñas. El sistema facilita la administración de citas, clientes, servicios, empleados y reportes, optimizando los procesos internos y mejorando la experiencia tanto para el personal como para los clientes.
+GiseNails es una aplicación desarrollada en Laravel que permite la gestión integral de un centro de uñas. El sistema facilita la administración de citas, clientes, servicios, productos, empleados y reportes, optimizando los procesos internos y mejorando la experiencia tanto para el personal como para los clientes.
+
+### Funcionalidades principales
+
+- Gestión de **citas**: creación, edición, visualización y eliminación de citas para los clientes.
+- Gestión de **empleados**: registro, edición, visualización y eliminación de empleados del centro.
+- Administración de **servicios** y **productos** ofrecidos.
+- Control de **clientes** y generación de **reportes**.
 
 ## ¿Cómo instalarlo?
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/Laravel-GiseNails.gitt
+   git clone https://github.com/tu-usuario/Laravel-GiseNails.git
    cd Laravel-GiseNails
    ```
 
@@ -51,9 +58,13 @@ GiseNails es una aplicación desarrollada en Laravel que permite la gestión int
 ## Estructura del proyecto
 
 - `app/` - Lógica principal de la aplicación (modelos, controladores, etc.)
+  - Incluye controladores y modelos para **citas** y **empleados**.
 - `database/` - Migraciones, seeders y factories para la base de datos
+  - Migraciones para tablas de citas y empleados.
 - `resources/views/` - Vistas Blade (frontend)
+  - Vistas para la gestión de citas y empleados.
 - `routes/` - Definición de rutas web y API
+  - Rutas para CRUD de citas y empleados.
 - `public/` - Archivos públicos (imágenes, CSS, JS compilado)
 - `config/` - Archivos de configuración
 - `tests/` - Pruebas automatizadas
@@ -74,4 +85,4 @@ GiseNails es una aplicación desarrollada en Laravel que permite la gestión int
 
 ## Experiencia de trabajo colaborativo
 
-El desarrollo de GiseNails fue una experiencia enriquecedora de trabajo en equipo. Utilizamos GitHub para la gestión de versiones y la colaboración, permitiendo que cada integrante contribuyera en diferentes módulos del sistema. La comunicación constante y la división de tareas nos ayudaron a resolver desafíos técnicos y a mejorar nuestras habilidades tanto en Laravel como en metodologías ágiles. El feedback entre compañeros fue clave para lograr un producto robusto
+El desarrollo de GiseNails fue una experiencia enriquecedora de trabajo en equipo. Utilizamos GitHub para la gestión de versiones y la colaboración, permitiendo que cada integrante contribuyera en diferentes módulos del sistema, incluyendo la gestión de citas y empleados. La comunicación constante y la división de tareas nos ayudaron a resolver desafíos técnicos y a mejorar nuestras habilidades tanto en Laravel como en metodologías ágiles. El feedback entre compañeros fue clave para lograr un producto robusto y

@@ -12,6 +12,10 @@
             <tr>
                 <th>ID</th>
                 <th>Nombres</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Correo</th>
+                <th>Foto</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -20,6 +24,16 @@
             <tr>
                 <td>{{ $empleado->id }}</td>
                 <td>{{ $empleado->Nombres }}</td>
+                <td>{{ $empleado->PrimerApel }}</td>
+                <td>{{ $empleado->SegundoApel }}</td>
+                <td>{{ $empleado->Correo }}</td>
+                <td>
+                    @if($empleado->Foto)
+                        <img src="{{ asset('storage/'.$empleado->Foto) }}" alt="Foto" width="60">
+                    @else
+                        Sin foto
+                    @endif
+                </td>
                 <td>
                     <a href="{{ route('empleados.show', $empleado) }}" class="btn btn-info btn-sm">Ver</a>
                     <a href="{{ route('empleados.edit', $empleado) }}" class="btn btn-warning btn-sm">Editar</a>

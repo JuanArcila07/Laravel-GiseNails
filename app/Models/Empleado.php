@@ -1,5 +1,4 @@
 <?php
-<?php
 
 namespace App\Models;
 
@@ -12,6 +11,9 @@ class Empleado extends Model
 
     protected $fillable = [
         'Nombres',
-        // Agrega aquí los demás campos que tenga tu tabla empleados
+        'PrimerApel',
+        'SegundoApel',
+        'Correo',
+        'Foto',
     ];
 }

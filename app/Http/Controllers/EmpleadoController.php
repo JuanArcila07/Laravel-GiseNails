@@ -1,5 +1,5 @@
 <?php
-<?php
+
 
 namespace App\Http\Controllers;
 
@@ -23,10 +23,19 @@ class EmpleadoController extends Controller
     {
         $request->validate([
             'Nombres' => 'required|string|max:255',
-            // Agrega validaciones para otros campos si existen
+            'PrimerApel' => 'required|string|max:255',
+            'SegundoApel' => 'nullable|string|max:255',
+            'Correo' => 'required|email|max:255',
+            'Foto' => 'nullable|image|max:2048',
         ]);
 
-        Empleado::create($request->all());
+        $data = $request->all();
+
+        if ($request->hasFile('Foto')) {
+            $data['Foto'] = $request->file('Foto')->store('empleados', 'public');
+        }
+
+        Empleado::create($data);
 
         return redirect()->route('empleados.index')->with('success', 'Empleado creado correctamente.');
     }
@@ -45,10 +54,19 @@ class EmpleadoController extends Controller
     {
         $request->validate([
             'Nombres' => 'required|string|max:255',
-            // Agrega validaciones para otros campos si existen
+            'PrimerApel' => 'required|string|max:255',
+            'SegundoApel' => 'nullable|string|max:255',
+            'Correo' => 'required|email|max:255',
+            'Foto' => 'nullable|image|max:2048',
         ]);
 
-        $empleado->update($request->all());
+        $data = $request->all();
+
+        if ($request->hasFile('Foto')) {
+            $data['Foto'] = $request->file('Foto')->store('empleados', 'public');
+        }
+
+        $empleado->update($data);
 
         return redirect()->route('empleados.index')->with('success', 'Empleado actualizado correctamente.');
     }

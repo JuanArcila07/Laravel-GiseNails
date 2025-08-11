@@ -18,3 +18,5 @@ Route::middleware(['auth'])->group(function () {
 
 // Auth routes
 Auth::routes();
+
+Route::resource('citas', App\Http\Controllers\CitaController::class);

@@ -1,10 +1,12 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
-use App\Models\Producto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage; 
+
+use App\Models\Producto;
+
 
 class ProductoController extends Controller
 {
@@ -57,7 +59,7 @@ class ProductoController extends Controller
         if ($request->hasFile('imagen')) {
             // Elimina la imagen anterior si existe
             if ($producto->imagen) {
-                \Storage::disk('public')->delete($producto->imagen);
+                Storage::disk('public')->delete($producto->imagen);
             }
             $data['imagen'] = $request->file('imagen')->store('imagenes', 'public');
         }

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ServicioController;
+use App\Http\Controllers\EmpleadoController;
 use Illuminate\Support\Facades\Auth;
 
 // Paso 1: Redirigir la raíz al login
@@ -14,6 +15,7 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function () {
     Route::resource('productos', ProductoController::class);
     Route::resource('servicios', ServicioController::class);
+    Route::resource('empleados', EmpleadoController::class);
 });
 
 // Auth routes

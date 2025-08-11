@@ -41,6 +41,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('servicios.index') }}">Servicios</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('empleados.index') }}">Empleados</a>
+                            </li>
                         @endauth
                     </ul>
 
